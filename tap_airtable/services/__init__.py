@@ -80,7 +80,7 @@ class Airtable(object):
     def discover_base(cls, base_id, base_name=None):
         cls.logger.info("discover base " + base_id)
         headers = cls.__get_auth_header()
-        response = cls.session.get(url=cls.metadata_url + base_id, headers=headers)
+        response = cls.session.get(url=cls.metadata_url + base_id + '/tables', headers=headers)
         response.raise_for_status()
         entries = []
 
@@ -116,7 +116,7 @@ class Airtable(object):
 
                 meta = metadata.write(meta, ('properties', field_name), 'inclusion', 'available')
                 meta = metadata.write(meta, ('properties', field_name), 'real_name', field['name'])
-                meta = metadata.write(meta, ('properties', field_name), 'airtable_type', field["config"]["type"] or None)
+                meta = metadata.write(meta, ('properties', field_name), 'airtable_type', field["type"] or None)
                 meta = metadata.write(meta, ('properties', field_name), 'airtable_field_ids', [field["id"]])
 
             schema = Schema(type='object', properties=schema_cols)
