@@ -23,7 +23,7 @@ def init_session() -> Session:
 
 
 class Airtable(object):
-    metadata_url = "https://api.airtable.com/v2/meta/"
+    metadata_url = "https://api.airtable.com/v0/meta/"
     records_url = "https://api.airtable.com/v0/"
     token = None
     selected_by_default = False
