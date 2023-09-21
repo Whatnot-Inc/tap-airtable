@@ -1,5 +1,5 @@
 {
-    "metadata_url":"https://api.airtable.com/v2/meta/",
+    "metadata_url":"https://api.airtable.com/v0/meta/bases/",
     "records_url":"https://api.airtable.com/v0/",
     "token":"airtable-api-key",
     "base_id": "base-id",
