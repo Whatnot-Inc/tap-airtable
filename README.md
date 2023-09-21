@@ -26,7 +26,7 @@ pip install -e .
 
 | Configuration Key   | required | Description                                                                                              |
 |---------------------|----------|----------------------------------------------------------------------------------------------------------|
-| metadata_url        | - | Airtable metadata URL, at the time of the update: "https://api.airtable.com/v0/meta/"                    |
+| metadata_url        | - | Airtable metadata URL, at the time of the update: "https://api.airtable.com/v0/meta/bases/"                    |
 | records_url         | - | Airtable content URL, at the time of the update: "https://api.airtable.com/v0/"                          |
 | token               | yes | Airtable Token                                                                                           |
 | base_id             | - | Airtable base ID to export                                                                               |
@@ -39,7 +39,7 @@ pip install -e .
 
 ```json
 {
-    "metadata_url":"https://api.airtable.com/v0/meta/",
+    "metadata_url":"https://api.airtable.com/v0/meta/bases/",
     "records_url":"https://api.airtable.com/v0/",
     "token":"airtable_token",
     "base_id": "airtable_base_id",
@@ -90,7 +90,7 @@ Complete the config.json
 
 ```
 {
-    "metadata_url":"https://api.airtable.com/v0/meta/",
+    "metadata_url":"https://api.airtable.com/v0/meta/bases/",
     "records_url":"https://api.airtable.com/v0/",
     "token":"airtable-api-key",
     "base_id": "base-id",
