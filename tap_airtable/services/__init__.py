@@ -23,7 +23,7 @@ def init_session() -> Session:
 
 
 class Airtable(object):
-    metadata_url = "https://api.airtable.com/v0/meta/"
+    metadata_url = "https://api.airtable.com/v0/meta/bases"
     records_url = "https://api.airtable.com/v0/"
     token = None
     selected_by_default = False
@@ -141,8 +141,8 @@ class Airtable(object):
 
         air_type = "string"
 
-        if "config" in col_info and "type" in col_info["config"]:
-            air_type = col_info["config"]["type"] # Not sure this is accurate anymore -- its working without it but should test
+        if "type" in col_info:
+            air_type = col_info["type"]
 
         inclusion = "available"
         if air_type in pk_types:
