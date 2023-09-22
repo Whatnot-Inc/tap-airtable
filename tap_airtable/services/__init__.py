@@ -141,8 +141,8 @@ class Airtable(object):
 
         air_type = "string"
 
-        if "config" in col_info and "type" in col_info["config"]:
-            air_type = col_info["config"]["type"] # Not sure this is accurate anymore -- its working without it but should test
+        if "type" in col_info:
+            air_type = col_info["type"] # Not sure this is accurate anymore -- its working without it but should test
 
         inclusion = "available"
         if air_type in pk_types:
