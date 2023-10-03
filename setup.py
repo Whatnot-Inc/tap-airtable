@@ -25,7 +25,7 @@ setup(name='tap-airtable',
           'python-slugify==4.0.1',
           'six==1.11.0',
           'tzlocal==1.5.1',
-          'urllib3==1.26.5'
+          'urllib3==1.26.17'
       ],
       entry_points='''
           [console_scripts]
